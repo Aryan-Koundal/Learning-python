@@ -1,0 +1,5 @@
+a=float(input("entre a value"))
+b=float(input("entre a value"))
+print (a>=b)
+name = (input ("entre your name"))
+print ("welcome:",name )

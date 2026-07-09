@@ -20,3 +20,8 @@ print ("and operator:", a>b)
 print ("and operator:", a==b)
 print ("and operatore:", a!=b)
 print ("and operator:", (a==b))
+#type conversion
+c=float(5)
+d=8.2
+print (type(c))
+print (c+d)
