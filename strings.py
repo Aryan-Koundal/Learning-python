@@ -22,4 +22,16 @@ print (final_str)
 str = "aryan"
 str[2]
 print(str[4])
-print (str[0:4])
+print (str[0:4]) 
+str12 ="aryan" 
+print(str12[-4:-1])
+str13 = "i am aryan" 
+print (str13.endswith("an"))
+print (str13.capitalize())
+str13 = str13.capitalize()
+print (str13)
+print (str13.replace("am","? \nmy name is"))
+print (str13.find ("aryan"))
+print (str13.count("a"))
+str= " hi i am a $$ symbol $999"
+print(str.count("$"))
