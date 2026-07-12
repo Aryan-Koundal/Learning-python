@@ -3,6 +3,6 @@ print (type(marks))
 print (marks [2])
 
 marks1 = (1,)
-print (marks1)
+print (marks)
 print (marks.index(6))
 print (marks.count ("aryan"))

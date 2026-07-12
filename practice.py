@@ -26,3 +26,55 @@ else:
 grade= ['A','B','B','C','A','C','D','B','A']
 print(grade.count("A"))
 print (grade)
+
+student = {
+    "name": input("entre your name"),
+    "age":int (input("entre your age")),
+    "class": input ("entre your class"),
+    "marks" :[]
+}
+subject = ["english","maths","economics","business studies","accountancy"]
+for a in range (5) :
+    marks = int(input(f"entre your marks of {subject[a]:}"))
+    student["marks"].append(marks)
+print (student["name"])
+print("Marks :", student["marks"])
+student = {
+    "name": input("entre your name "),
+    "age": int(input("entre your age")),
+    "class": input("entre your class"),
+    "marks": []
+}
+subject = ["eco", "maths", "english", "business", "computer"]
+for i in range(5):
+    marks = int(input(f"entre your marks of {subject[i]}"))
+    student["marks"].append(marks)
+print("marks", student["marks"])
+
+
+dictionary= {
+    "cat":"a small type pokemon",
+    "table" : ["a piece of furniture","list of facts &figures"]
+}
+print (dictionary)
+
+subjects={"python","java","c++","python","javascript","java","python","java","c++","c"}
+print (len(subjects))
+
+
+subject={}
+a=int(input("entre your english marks"))
+b=int(input("entre your maths marks"))
+c=int(input("entre your computer marks"))
+
+subject.update({"english": a ,
+                "maths": b,
+                "computer":c})
+for key , value in subject .items ():
+    print (f"{key}:{value}/100")
+
+values = {
+    ("float",9.0),
+    ("int",9)
+}
+print (values)
