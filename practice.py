@@ -78,3 +78,46 @@ values = {
     ("int",9)
 }
 print (values)
+
+
+n = int(input("Enter the numbers whose sum you want to find"))
+sum = 0
+count = 1
+while count<=5:
+    count+=1
+    sum +=n
+print ("first 5 sum of",n,"is",sum)
+
+sum = 0
+count = 1 
+while count <=5:
+    num = int (input ("entre a number"))
+    sum +=num
+    count +=1
+    print ("sum=",sum)
+
+n=int (input ("entre your no."))
+sum = 0 
+i=1 
+for i in range (n):
+    i+=1
+    sum+=n
+    
+
+    print (sum)
+
+
+n=int (input ("entre your no."))
+sum = 0 
+i=1 
+for i in range (n):
+    i+=1
+    sum+=n
+
+    print (sum)
+
+    
+
+
+
+
