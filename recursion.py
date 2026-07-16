@@ -29,7 +29,7 @@ def sum (n):
     return sum(n-1)+n
 print (sum (5))
 
-#write a recrusive function to print all elements in a list [hint : use list & index as parameter]
+# #write a recrusive function to print all elements in a list [hint : use list & index as parameter]
 def element (list , idx):
     if (idx ==len(list)):
         return 
@@ -37,3 +37,9 @@ def element (list , idx):
     element (list , idx +1)
 number = [1,2,3,4,5,6]
 element(number,0)
+
+# #write a recursive function to calculate the sum of all elements in a list 
+def element (n):
+    if (n==0):
+        return 
+      
