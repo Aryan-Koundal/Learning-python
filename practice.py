@@ -132,3 +132,25 @@ for i in range (1,n+1):
     i*=1
     fact*=i
     print(fact) 
+
+count = 0
+with open ("numbers", "r") as f:
+    data = f.read()
+    numbers = data.split(",")
+    for i in numbers :
+        num = int(i)
+        if (num % 2 == 0) :
+         count += 1
+print (count )
+ 
+
+with open ("numbers","r") as f:
+   data = f.read()
+numbers = data.split (",")
+heighest = 0 
+for number in numbers :
+    num = int(number)
+    if num > heighest:
+      heighest = num
+print("heighest marks",heighest)
+      
