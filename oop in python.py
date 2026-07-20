@@ -271,3 +271,145 @@ p1 = Student()
 p1.changename("kaku")
 print (p1.name)
 print (Student.name)
+
+#property
+class Student :
+    def __init__(self,phy,chem,math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+        @property
+        def percentage (self):
+            return str((self.chem+self.math+self.phy)/3)+"%"
+student1 = Student(98,89,97)
+print (student1.precentage,"%")
+student1.phy = 89
+print (student1.phy)
+student1.percentage()
+print (student1.precentage,"%")
+
+
+#without property
+class Student :
+    def __init__(self,phy,chem,math):
+        self.phy = phy
+        self.chem = chem
+        self.math = math
+        self.precentage = str((self.chem+self.math+self.phy)/3)+"%"
+
+    def percentage (self):
+         self.precentage = str((self.chem+self.math+self.phy)/3)+"%"
+student1 = Student(98,89,97)
+print (student1.precentage,"%")
+student1.phy = 89
+print (student1.phy)
+student1.percentage()
+print (student1.precentage,"%")
+
+#polymorphism : operator overloading 
+
+print (1+2)
+print ("aryan"+"koundal")
+print ([1,2,3]+[4,5,6])
+
+#add dunder function
+class Complex:
+    def __init__(self,real,img):
+     self.real = real
+     self.img = img
+
+    def show_number (self):
+       print (self.real,"i+",self.img,"j")
+
+    def __add__ (self,num):
+       newreal = self.real + num.real
+       newimg = self.img + num.img
+       return Complex(newreal,newimg)
+
+num1 = Complex(1,3)
+num1.show_number()
+num2 = Complex(4,8)
+num2.show_number()
+num3 = num1+num2
+num3.show_number()
+
+#without dunder function
+class Complex:
+    def __init__(self,real,img):
+     self.real = real
+     self.img = img
+
+    def show_number (self):
+       print (self.real,"i+",self.img,"j")
+
+    def add (self,num):
+       newreal = self.real + num.real
+       newimg = self.img + num.img
+       return Complex(newreal,newimg)
+
+num1 = Complex(1,3)
+num1.show_number()
+num2 = Complex(4,8)
+num2.show_number()
+num3 = num1.add(num2)
+num3.show_number()
+
+
+#define a circle class to create with radius r using the constructor .define an area()method of the class which calculates the area of th circle. define a perimeter() method of the circle which allows you to calculates the perimeter of the circle.
+class Circle :
+    def __init__(self,radius):
+      self.radius = radius 
+    
+    def area (self):
+       return 3.14*self.radius**2
+
+    def perimeter (self):
+       return 2*3.14*self.radius
+    
+Circle1 = Circle(14)
+print (Circle1.area())
+print (Circle1.perimeter())
+
+#define a employee class with attributes role , department & salary . this class also has a showDetail() method . create an engineer class that inherits that properties from employee & has additional attributes :name &age                                                                 
+
+class Employee :
+    def __init__(self, role , department , salary):
+        self.role = role 
+        self.department = department
+        self.salary = salary
+    
+    def showDetail(self):
+        print ("role =",self.role)
+        print ("department =", self.department)
+        print ("salary =",self.salary)
+
+class Engineer (Employee):
+    def __init__(self, name , age ):
+        self.name = name 
+        self.age = age 
+        super().__init__("Engineer","head","$500")
+    def showDetail(self):
+        print ("Name =",self.name)
+        print ("age=",self.age)
+        super().showDetail()
+
+e1 = Employee("head","3rd","$400")
+print (e1.salary)
+e1.showDetail()
+
+e2 = Engineer("Aryan","18")
+e2.showDetail()
+
+
+#cereate a classs Order which stores item & its price . use dunder function __gt__() to convey that:                                        order1>oder if order1> price of order2
+class Order :
+    def __init__ (self,item,price):
+        self.item = item
+        self.price = price 
+
+    def __gt__(self,odr2):
+        return self.price > odr2.price
+
+odr1 = Order ("chips",20)
+odr2 = Order("kurkure",50)
+print (odr1>odr2)
